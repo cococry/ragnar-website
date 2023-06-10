@@ -8,24 +8,37 @@
         <meta charset="UTF-16">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/style.css" rel="stylesheet">
+       
+        <style>
+            body {
+                background-image: url("./images/wave.svg");
+                margin: 0;
+                padding: 0;
+                background-size: cover;
+            }
+        </style>
     </head>
     <body>
         <h1 class="center-text">RagnarWM</h1>
-        <img src="./images/logo.png" alt="Logo" width="200px" class="center-image">
+        <img src="./images/logo.png" alt="Logo" width="200px" class="center-image"/>
 
-        <h2 class="center-text">Minimal, flexibal & userfriendly.</h2>
+        <h2 class="center-text" style="font-size: 35px; text-shadow: 2px 2px 4px rgba(54, 12, 9, 0.5);">Minimal, flexibal & userfriendly.</h2>
 
-        <div style="margin-top: 40px; margin-left: 20px; margin-right: 20px;">
+        <div class="center-div">  
+            <a href="https://github.com/cococry/Ragnar"><img src="./images/github.svg" alt="GitHub" style="width:50px;" class="column"></a>
+            <a href="https://youtube.com/@cococry"><img src="./images/youtube.svg" alt="Youtube" style="width:50px;"class="column"></a>
+            <a href="https://www.reddit.com/user/cococry"><img src="./images/reddit.png" alt="Reddit" style="width:50px;"class="column"></a>
+        </div>
+        <div style="margin-left: 20px; margin-right: 20px; margin-top: 20px">
             <h1 class="heading">An Overview</h1>
-            <p style="margin-left: 20px">
+            <p style="margin-left: 20px;max-width: 800px;">
                 Ragnar is a window manager for X written entirely in C.
                 Codewise, the project is very minimal to avoid bugs and 
                 messy things. Ragnar uses Xlib for it's X-Server interface.
                 Currently (v1.2) the project has about 2.1k lines of code.
             </p>
         </div>
-        <hr>
-
+            
         <h1 class="heading" style="margin-top: 20px; margin-left:20px">Installation</h1>
         <div style="margin-top: 40px; margin-left: 40px; margin-right: 20px;">
                     
@@ -33,14 +46,16 @@
 
                 <h3>The Arch Script</h3>
                 <p>Installing Ragnar with the arch-installation script is as easy as:</p>
-                <code>cd ~/
+                <div class="shadow">
+                    <code>cd ~/
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/cococry/Ragnar/main/install/arch_installation.sh)"</code>
-
+                </div>
                 <h3>The Ubuntu Script</h3>
                 <p>Just run the script on your Ubuntu mashine and you're good to go:</p>
+                <div class="shadow">
                 <code>cd ~/
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/suleyman-kaya/Ragnar/main/ubuntu_installation.sh)"</code>
-
+                </div>
                 <h3>Installation without a Script</h3>
 
                 <p>Installing Ragnar without a script is also a fairly easy process.
@@ -54,26 +69,85 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/suleyman-kaya/Ragnar/main/
                     <li style="font-weight: bold">git</li>
                     <li style="font-weight: bold">gcc</li>
                     <li style="font-weight: bold">make</li>
+                    <li style="font-weight: bold">sudo</li>
                 </ul>
 
                 <h3>On Arch</h3>
                 <p>Install these packages with
                 pacman: </p>
-                <code>sudo pacman -S xorg xorg-xinit git gcc make</code>
-
+                <div class="shadow">
+                    <code>sudo pacman -S xorg xorg-xinit git gcc make sudo</code>
+                </div>
                 <h3>On Debian</h3>
                 <p>The dependencies are installed with apt: </p>
-                <code>sudo apt-get install xorg xorg-xinit git gcc make</code>
-                
+                <div class="shadow">
+                    <code>sudo apt-get install xorg xorg-xinit git gcc make sudo</code>
+                </div>
                 <p>After installing the build dependencies to your system, the next step is to clone the Ragnar git repository</p>
                 
                 <h3>Clone the Git-Repository</h3>
 
                 <p>To clone the repository run:</p>
-                <code>git clone --depth=1 https://github.com/cococry/Ragnar</code>
-                
+                <div class="shadow">
+                    <code>git clone --depth=1 https://github.com/cococry/Ragnar</code>
+                </div>
                 <p>If the repository folder is on your system, cd into it and install ragnar to your mashine with the 'make' command.</p>
                 <h3>Installation with 'make'</h3>
+                <p>Installing ragnar onto your mashine is as easy as: </p>
+                <div class="shadow">
+                    <code>sudo make ragnar install</code>
+                </div>
+
+                <p>This requires the make package being installed and also access to sudo.
+                    The Makefile compiles ragnar and copies it to your /usr/bin directory.</p>
+
+                <h3>Setting up .xinitrc</h3>
+
+                <p>Now you need to specify to use Ragnar as your X Window manager. 
+                On startup of the X-Server, ragnar should start.</p>
+                <p>To do this you 
+                    need to create a .xinitrc file in your home directory:</p>
+
+                <div class="shadow">
+                    <code>cd ~/
+touch .xinitrc</code>
+                </div>
+
+                <p>Now, add 'exec ragnar' to your .xinitrc to start ragnar on X-Startup:</p> 
+
+                <div class="shadow">
+                    <code>echo exec ragnar >> .xinitrc</code>
+                </div>
+
+                <h3>Starting Ragnar on boot</h3>
+
+                <p>If you want to start Ragnar as your PC boots, you need to call the 
+                    'startx' command which executes .xinitrc which does 'exec ragnar'. </p>
+                <p>To do this, add an if statement that checks if the X-Server has been started yet
+                    to your shell's rc file (.zshrc, .bashrc etc.):</p>
+                <div class="shadow">
+                    <code>if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
+    startx
+fi</code>
+                </div>
+
+                <h3>Adding Ragnar to your sessions</h3>
+                
+                <p>If you are using a session manager you need to add Ragnar to your session,
+                    so you can use it.</p>
+                
+                <p>To do that, copy the ragnar.desktop file in your Ragnar directory to 
+                    /usr/share/xsessions:</p>
+                
+                <div>
+                    <code>sudo cp ragnar.desktop /usr/share/xsessions/ragnar.desktop</code>
+                </div>
+
+                <h3>Conclusion</h3>
+
+                <p>That's it, you installed Ragnar to your system and now using it as your window manager. 
+                For further explanations, tutorials & information, there are lots of them on this site. 
+                If you're having any trouble installing ragnar or general problems, feel free to <a href="https://github.com/cococry/Ragnar/issues/new/choose">sumbit an issue on GitHub</a>.
         </div>
     </body>
 </html>
