@@ -39,7 +39,7 @@
         <div style="margin-left: 20px; margin-right: 20px; margin-top: 20px">
             <h1 class="heading">An Overview</h1>
             <p style="margin-left: 20px;max-width: 800px;">
-                Ragnar is a window manager for X written entirely in C.
+                Ragnar is a dynamic tiling window manager for X written entirely in C.
                 Codewise, the project is very minimal to avoid bugs and 
                 messy things. Ragnar uses Xlib for it's X-Server interface.
                 Currently (v1.2) the project has about 2.1k lines of code.
@@ -50,20 +50,26 @@
         <div style="margin-top: 40px; margin-left: 40px; margin-right: 20px;">
                     
                 <p>There are some installation scripts for a few distros like ubuntu & arch. Those make the process of installing very easy & automated.</p>
-
-                <h3>The Arch Script</h3>
+                
+                <div style="align-items: center;display: flex;">
+                    <h3>The Arch Script</h3>
+                    <img src="./images/arch.png" style="width:30px;margin-left: 10px;">
+                </div>
                 <p>Installing Ragnar with the arch-installation script is as easy as:</p>
                 <div class="shadow">
                     <code>cd ~/
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/cococry/Ragnar/main/install/arch_installation.sh)"</code>
                 </div>
-                <h3>The Ubuntu Script</h3>
+                <div style="align-items: center;display: flex;">
+                    <h3>The Ubuntu Script</h3>
+                    <img src="./images/ubuntu.png" style="width:30px;margin-left: 10px;">
+                </div>
                 <p>Just run the script on your Ubuntu mashine and you're good to go:</p>
                 <div class="shadow">
                 <code>cd ~/
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/suleyman-kaya/Ragnar/main/ubuntu_installation.sh)"</code>
                 </div>
-                <h3>Installation without a Script</h3>
+                <h2>Installation without a Script</h2>
 
                 <p>Installing Ragnar without a script is also a fairly easy process.
                    Just follow these easy steps:</p>
@@ -79,13 +85,20 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/suleyman-kaya/Ragnar/main/
                     <li style="font-weight: bold">sudo</li>
                 </ul>
 
-                <h3>On Arch</h3>
+                <div style="align-items: center;display: flex;">
+                    <h3>On Arch</h3>
+                    <img src="./images/arch.png" style="width:30px;margin-left: 10px;">
+                </div>
                 <p>Install these packages with
                 pacman: </p>
                 <div class="shadow">
                     <code>sudo pacman -S xorg xorg-xinit git gcc make sudo</code>
                 </div>
-                <h3>On Debian</h3>
+
+                <div style="align-items: center;display: flex;">
+                    <h3>On Debian</h3>
+                    <img src="./images/debian.png" style="width:30px;margin-left: 10px;">
+                </div>
                 <p>The dependencies are installed with apt: </p>
                 <div class="shadow">
                     <code>sudo apt-get install xorg xorg-xinit git gcc make sudo</code>
@@ -146,7 +159,7 @@ fi</code>
                 <p>To do that, copy the ragnar.desktop file in your Ragnar directory to 
                     /usr/share/xsessions:</p>
                 
-                <div>
+                <div class="shadow">
                     <code>sudo cp ragnar.desktop /usr/share/xsessions/ragnar.desktop</code>
                 </div>
 
@@ -156,5 +169,156 @@ fi</code>
                 For further explanations, tutorials & information, there are lots of them on this site. 
                 If you're having any trouble installing ragnar or general problems, feel free to <a href="https://github.com/cococry/Ragnar/issues/new/choose">sumbit an issue on GitHub</a>.
         </div>
+            <h1 class="heading" style="margin-top: 50px; margin-left: 20px;">Tutorial</h1>
+
+            <div style="margin-top: 40px; margin-left: 40px; margin-right: 20px;">
+                <p>Booting into ragnar the first time can be pretty overwhelming for new users. How can i open a terminal? How can i move windows? These questions and more are going to be answered in this chapter. After reading this you will be able to use Ragnar like a pro.</p>
+
+                <h2 style="text-decoration:underline;margin-top: 20px;">Opening keybinded apps</h2>
+
+                <p>In Ragnar, by default there are keybinds for opening your terminal, your browser & your 
+                    application launcher. Those are:</p>
+
+                <h3 style="text-decoration: underline;">Terminal</h3>
+                
+                <div class="border">
+                    <h4>Super + Enter</h4>
+                </div>
+
+                <div>
+                    <img src="./images/terminal.png" alt="Terminal" style="width:300px;box-shadow:0 3px 11px rgba(0, 0, 0, 0.8)">
+                
+                <p>The default terminal of Ragnar is alacritty. If nothing happens when you press
+                    Super + Enter, install alacritty to your system and it will work.</p>
+                
+                </div>
+                <h3 style="text-decoration: underline;">Browser</h3>
+                
+                <div class="border">
+                    <h4>Super + W</h4>
+                </div>
+                
+                <div>
+                    <img src="./images/browser.png" alt="Browser" style="width:300px;box-shadow:0 3px 11px rgba(0, 0, 0, 0.8)">
+                </div>
+
+                <p>Ragnar uses the chromium browser as it's default browser. If nothing happens when you 
+                    press Super + W, install the 'chromium' package to your system and it will work.</p>
+
+                
+                <h3 style="text-decoration: underline;">Application Launcher</h3>
+                
+                <div class="border">
+                    <h4>Super + S</h4>
+                </div>
+
+                <div>
+                    <img src="./images/applauncher.png" alt="App launcher" style="width:300px;box-shadow:0 3px 11px rgba(0, 0, 0, 0.8)">
+                </div>
+
+                <p>Dmenu is used as the default application launcher of ragnar. If pressing Super + S 
+                    does nothing, install the 'dmenu' package to your system and it will work.
+                <p>
+
+                <h2 style="text-decoration:underline;margin-top: 20px;">Working with Windows</h2>
+            <p>Now, that you can open basic windows like a terminal, you may ask yourself how you resize a window or move one. This and more is going to be explained in this chapter.</p>
+
+                <h3 style="text-decoration: underline;">Selecting windows</h3>
+
+                <p>Selecting a window is as easy as hovering over it with your mouse. This will change it's border color
+                    to 'WINDOW_BORDER_COLOR_ACTIVE' which is the border-color of selected windows in the config file.
+                    It also sets the X input-focus to the window you are hovering. This method does not raise the window.</p>
+
+                <p> It is possible to off hovering over windows to select them in the config file. You can read more about 
+                    configuring in the configuration chapter.</p>
+
+                <p>You can also select a window by cycling to it. This is done by pressing: </p>
+
+                <div class="border">
+                    <h4>Super + Tab</h4>
+                </div>
+
+                <p>This cycles through all of the windows that are on your selected monitor and on your selected desktop.
+                    The window will also be highlighted by the 'WINDOW_BORDER_COLOR_ACTIVE' color and the X input focus
+                    will be changed to the window. This also raises the window.</p>
+
+                <p>The last method of selecting a window in Ragnar is by hard-selecting it. This is done by pressing:</p>
+
+                <div class="border">
+                    <h4>Super + Middle Mouse</h4>
+                </div>
+
+                <p>Hard-selecting a window will cause it to be marked with the 'WINDOW_BORDER_COLOR_HARD_SELECTED' color.
+                    If any window is hard selected, hovering over other windows will be ignored. Hard selection can be
+                    toggled by pressing the Super key and the key specified for hard-selecting in the config file.</p>
+
+                <h3 style="text-decoration: underline;">Moving windows</h3>
+
+                <p>To move windows around, hold and press:</p>
+
+                
+                <div class="border">
+                    <h4>Super + Left Mouse</h4>
+                </div>
+
+                <div style="margin-top: 40px;">
+                    <img src="./images/mouse.png" style="display:inline-block;" alt="mouse" width="80px">
+                    <img src="./images/movewindow.gif" style="margin-left: 30px;box-shadow:0 3px 11px rgba(0, 0, 0, 0.8)" width="300px">
+                </div>
+
+                <h3 style="text-decoration: underline;">Resizing windows</h3>
+
+                <p>To change the size of windows, hold and press:</p>
+
+                <div class="border">
+                    <h4>Super + Right Mouse</h4>
+                </div>
+                
+                <div style="margin-top: 40px;">
+                    <img src="./images/mouse.png" style="display:inline-block;" alt="mouse" width="80px">
+                    <img src="./images/resizewindow.gif" style="margin-left: 30px;box-shadow:0 3px 11px rgba(0, 0, 0, 0.8)" width="300px">
+                </div>
+                
+                <h2 style="text-decoration:underline;margin-top: 20px;">Window Layout</h2>
+
+                <p>Ragnar, as it is a tiling window manager, it has tiled layouts. By default there
+                    are four window layouts, officially labled: Tiled Master, Horizontal Master, Vertical Stripes & Horizontal Stripes. A floating mode is also available.
+                    You can dynamically change the size of the master and the slave windows in the layout, alter the gap in the layout, move windows around and alter the master window. All of that functionality
+                will be explained in this section.</p>
+
+                <p>The default window layout in the default configuration is set to the Tiled Master layout. To the left, you have one master window and to the right there is a stack of slave windows.</p>
+
+                <h3 style="text-decoration: underline;">Altering the layout</h3>
+
+                <h4 style="font-style: italic;">Changing slave size</h4>
+
+                <p>To change the change (x or y, depending on layout) of a slave window, use:</p>
+
+                <div style="display: inline-block;">
+                    <div class="border">
+                        <h4>Super + J</h4>
+                    </div>
+                    <div class="border">
+                        <h4>Super + K</h4>
+                    </div>
+                </div>
+
+                <p>Note that you can only change the width or height of a window in a layout that way
+                    as long it is not lower than WINDOW_MIN_SIZE_LAYOUT_HORIZONTAL or WINDOW_MIN_SIZE_VERTICAL. Also, changing a slave window's size that way only works if there are two or more slaves on the stack.
+                    Changing slave size only works in layouts where a concept of slaves and masters exists.
+
+                <h4 style="font-style: italic;">Changing master size</h4>
+
+                <p>To change size size of the master window in the layout, use:</p>
+
+                <div style="display: inline-block;">
+                    <div class="border">
+                        <h4>Super + H</h4>
+                    </div>
+                    <div class="border">
+                        <h4>Super + L</h4>
+                    </div>
+                </div>
+            </div>
     </body>
 </html>
