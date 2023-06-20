@@ -12,19 +12,19 @@ const AutoplaySlider = withAutoplay(AwesomeSlider);
 
 const Slider = () => {
     return (
-        <div className="w-[700px] h-[400px]">
+        <div className="w-[640px] h-[320px]">
         <AutoplaySlider play={true} cancleOnIteraction={false} interval={2000}>
             <div>
-                <Image src={Screenshot1} width={700} alt="screen1"/>
+                <Image src={Screenshot1}  alt="screen1"/>
             </div>
             <div>
-                <Image src={Screenshot2} width={700} alt="screen2"/>
+                <Image src={Screenshot2}  alt="screen2"/>
             </div>
             <div>
-                <Image src={Screenshot3} width={700} alt="screen3"/>
+                <Image src={Screenshot3} alt="screen3"/>
             </div>
             <div>
-                <Image src={Screenshot4} width={700} alt="screen4"/>
+                <Image src={Screenshot4} alt="screen4"/>
             </div>  
         </AutoplaySlider>
         </div>
