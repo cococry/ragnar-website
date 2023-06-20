@@ -12,7 +12,7 @@ const AutoplaySlider = withAutoplay(AwesomeSlider);
 
 const Slider = () => {
     return (
-        <div className="w-full md:w-1/2 min-w-[350px]">
+        <div className="w-full md:w-1/2 min-w-[350px] mb-10">
         <AutoplaySlider play={true} cancleOnIteraction={false} interval={2000}>
             <div>
                 <Image src={Screenshot1}  alt="screen1"/>
