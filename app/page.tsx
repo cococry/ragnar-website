@@ -4,6 +4,7 @@ import Logo from 'public/logo.png'
 import Branding1 from 'public/branding1.png'
 import Branding2 from 'public/branding2.png'
 import Slider from "@/components/slider"
+import imageTextDiv from "@/components/imageText"
 
 export default function Home() {
     const handleClick = () => {
@@ -35,40 +36,14 @@ export default function Home() {
                         </div>
                     </div>
                     <Slider/>
+                    <imageTextDiv/>
                 </div>  
                 
                 <div className="px-6 md:px-40">
                     <h1 className="text-center md:text-left text-white text-6xl font-bold">Overview</h1>
 
-                    <div className="flex flex-col justify-start lg:flex-row mt-20 gap-[350px]">
-                        <div className="flex flex-col items-center md:items-start w-1/2">
-                        <Image
-                            className="w-full"
-                            src={Branding1}
-                            alt="brading"/>
-                        </div>
-                        <div className= "max-w-md flex flex-col justify-center items-center md:items-start w-1/2">
-                        <h1 className="text-white text-4xl font-bold text-center">Minimalism & Features</h1>
-                        <p className="text-center text-2xl mt-5 text-white">Ragnar aims on being minimal. Features & minimalism are treated in a way in that the user will have a great experience but at the same time, the implementation 
-                            of the window manager is kept simple and reliable.</p> 
-                        </div>
-                    </div>
                 </div>
-                <div className="px-6 md:px-40">
-                <div className="flex flex-col justify-start lg:flex-row mt-20 gap-[350px]">
-                        <div className= "max-w-md flex flex-col justify-center items-center md:items-start w-1/2">
-                        <h1 className="text-white text-4xl font-bold text-center">Minimalism & Features</h1>
-                        <p className="text-center text-2xl mt-5 text-white">Ragnar aims on being minimal. Features & minimalism are treated in a way in that the user will have a great experience but at the same time, the implementation 
-                            of the window manager is kept simple and reliable.</p> 
-                        </div>
-                        <div className="flex flex-col items-center md:items-start w-1/2">
-                        <Image
-                            className="w-full"
-                            src={Branding2}
-                            alt="brading"/>
-                        </div>
-                    </div>
-                </div>
-        </>
+                
+            </>
     )
 }
