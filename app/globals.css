@@ -33,3 +33,11 @@ body {
 .pixelart {
     image-rendering: pixelated;
 }
+
+.red_glow {
+     box-shadow: 0 0 5px 5px rgba(189, 17, 17, 0.5);
+}
+
+.green_glow {
+     box-shadow: 0 0 4px 4px rgba(97, 237, 141, 0.5);
+}
