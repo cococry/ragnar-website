@@ -27,7 +27,7 @@ export default function Home() {
                             <p className="text-center xl:text-left text-2xl mt-5 text-white font-bold">Ragnar is a dynamic & tiling window manager written completly in C & X11.</p>
                             <div>
                                 <div className="relative mt-10 max-w-min p-8 whitespace-nowrap -ml-10">
-                                    <button onClick={handleClick} className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 text-black bg-gradient-to-b from-[#ebebeb] to-[#bababa] px-9 py-6 rounded-full text-2xl ring-2 ring-[#e3e3e3]/50"><p >Install Ragnar</p></button>
+                                    <button onClick={handleClick} className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 text-black bg-gradient-to-b from-[#ebebeb] to-[#bababa] px-9 py-6 rounded-full  font-bold text-2xl ring-2 ring-[#e3e3e3]/50"><p >Install Ragnar</p></button>
                                     <div className="z-[-1] rounded-full absolute top-0 bottom-0 left-0 right-0 flex justify-center -space-x-14 p-5">
                                         <div className="bg-blue-500 blur-2xl rounded-full h-full w-full opacity-40"></div>
                                         <div className="bg-red-500  blur-2xl rounded-full h-full w-full opacity-40"></div>
