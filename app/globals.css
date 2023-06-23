@@ -26,7 +26,7 @@ body {
 
 .background {
     background-image: url("/wave.svg");
-    background-size: cover;
+    background-size: 100vw;
     background-repeat: no-repeat
 }
 
@@ -40,4 +40,8 @@ body {
 
 .green_glow {
      box-shadow: 0 0 4px 4px rgba(97, 237, 141, 0.5);
+}
+
+.black_glow {
+     box-shadow: 0 0 6px 6px rgba(2, 2, 2, 0.5);
 }

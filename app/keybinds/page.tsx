@@ -27,7 +27,7 @@ const Keybinds = () => {
         <div>
             <div className="flex flex-col justify-center items-center gap-8">
                 <div className="flex flex-row justify-center items-center gap-8">
-                    <img src="/keyboard.svg" alt="keyboard" width={400}/>
+                    <img className="shadow-xl shadow-red-300/50" src="/keyboard.png" alt="keyboard" width={400}/>
                 </div>
                 <h1 className="text-2xl md:text-6xl bg-clip-text text-transparent bg-gradient-to-b pb-2 from-[#fff] to-[#454545] mt-2 text-center font-bold">Ragnar Keybindings</h1>
                 <p className="text-2xl text-white mt-5 text-center font-bold w-[50%]">Here you can find and search all of the default Ragnar keybindings. Those keybindings are all set
@@ -43,9 +43,9 @@ const Keybinds = () => {
                 </div>
             </div>
             </div>
-            <div className="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] mt-10 gap-20 border border-solid md:p-8 border-[#ffc9c9] rounded-lg border-4 red_glow ">
-                {filterData.length === 0 && <div><h1 className="text-center font-bold text-6xl text-white">Search Not Found :(</h1><h1 className="text-center font-medium text-2xl text-white mt-5">Try something different</h1></div>}
-                { filterData.map((e) => <MapKeybinds desc={e.desc} keyText={e.key}/>)}
+            <div className="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] mt-10 gap-20 border border-solid md:p-8 border-[#ffc9c9] rounded-2xl border-4 red_glow ">
+                {filterData.length === 0 && <div><h1 className="text-center font-bold text-6xl text-white">Search Not Found</h1><h1 className="text-center font-medium text-2xl text-white mt-5">Try something different</h1></div>}
+                { filterData.map((e, index) => <MapKeybinds key={index} desc={e.desc} keyText={e.key}/>)}
             </div>
         </div>
     )

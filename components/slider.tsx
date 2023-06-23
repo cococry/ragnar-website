@@ -1,6 +1,7 @@
 "use client"
 import AwesomeSlider from 'react-awesome-slider'
 import 'react-awesome-slider/dist/styles.css'
+// @ts-ignore
 import withAutoplay from 'react-awesome-slider/dist/autoplay';
 import Screenshot1 from 'public/screenshot1.png'
 import Screenshot2 from 'public/screenshot2.png'

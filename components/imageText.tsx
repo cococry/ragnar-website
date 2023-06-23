@@ -20,11 +20,11 @@ const ImageTextDiv = ({video, img, heading, desc, btnText, left} : ImageTextDivP
             <div className="flex flex-col w-1/2">
             {img ? 
             <Image
-                className="w-full shadow-lg shadow-pink-500/50"
+                className="w-full shadow-xl shadow-pink-300/50"
                 src={img}
                 alt="brading"/>
             :
-                <video className="w-full shadow-lg shadow-pink-500/50" autoPlay muted loop>
+                <video className="w-full shadow-xl shadow-pink-300/50" autoPlay muted loop>
                     <source src={video} />
                 </video>
             }
