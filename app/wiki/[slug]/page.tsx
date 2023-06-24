@@ -1,5 +1,6 @@
 import FeaturesWiki from "@/components/Features";
 import GettingStarted from "@/components/GettingStarted";
+import HowToInstall from "@/components/HowToInstall";
 import WikiNavigation from "@/components/wikiNavigation";
 
 const wikiContentPages = [
@@ -10,6 +11,10 @@ const wikiContentPages = [
     {
         slug: "features",
         content: <FeaturesWiki/>
+    },
+    {
+        slug: "installation",
+        content: <HowToInstall/>
     },
 ]             
 

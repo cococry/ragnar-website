@@ -24,7 +24,7 @@ interface WikiProps {
 }
 const WikiNavigation = (props : WikiProps) => {
     return (
-        <div className="whitespace-nowrap inline-block mr-10 bg-gray-700/20 p-5 rounded-2xl black_glow border border-[3px] border-rounded border-[#333333] ">
+        <div className="xl:whitespace-nowrap inline-block mr-10 bg-gray-700/20 p-5 rounded-2xl black_glow border border-[3px] border-rounded border-[#333333] ">
             <ul className="flex flex-col gap-2 justify-start">
                 {WikiNavigationData.map((navItem, index) => 
                 navItem.heading ?  

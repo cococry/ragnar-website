@@ -15,13 +15,27 @@ const FeaturesWiki = () => {
                 can be configured.`}</p>
 
             <h1 className="text-white font-bold text-4xl mt-10">Default Layouts</h1>
-            <div className="flex flex-col xl:flex-row justify-start items-left mt-3 gap-4">
-                <img src="/layout1.png" width="350px" />
-                <img src="/layout2.png" width="350px" />
-                <img src="/layout3.png" width="350px" />
-                <img src="/layout4.png" width="350px" />
+            <div className="flex flex-col xl:flex-row justify-start items-left mt-5 gap-8">
+                <div className="flex flex-col justify-center items-center">
+                    <img className="shadow-xl shadow-gray-750 mb-3" src="/screenshot3.png" width="350px" />
+                    <h1 className="text-white text-center font-bold text-xl">Tiled Master</h1>
+                </div>
+                <div className="flex flex-col justify-center items-center">
+                    <img className="shadow-xl shadow-gray-750 mb-3" src="/layout2.png" width="350px" />
+                    <h1 className="text-white text-center font-bold text-xl">Vertical Master</h1>
+                </div>
             </div>
 
+            <div className="mt-8 flex flex-col xl:flex-row justify-start items-left mt-3 gap-8">
+                <div className="flex flex-col justify-center items-center">
+                    <img className="shadow-xl shadow-gray-750 mb-3" src="/layout3.png" width="350px" />
+                    <h1 className="text-white text-center font-bold text-xl">Vertical Stripes</h1>
+                </div>
+                <div className="flex flex-col justify-center items-center">
+                    <img className="shadow-xl shadow-gray-750 mb-3" src="/layout4.png" width="350px" />
+                    <h1 className="text-white text-center font-bold text-xl">Horizontal Stripes</h1>
+                </div>
+            </div>
             <h1 className="text-white font-bold text-4xl mt-10">Multiple Desktops</h1>
             <p className="text-white mt-5">Ragnar has a system of multiple workspaces directly built in. There is no 
                 maximum number of workspaces you can specify in the config. Windows can be moved through workspaces and layouts 
@@ -29,7 +43,7 @@ const FeaturesWiki = () => {
                 as in Ragnar, you can cycle desktops and windows up and down instead of having a hotkey for a certain desktop. This allows 
                 to have infite desktops.</p>
 
-            <h1 className="text-white font-bold text-4xl mt-10">Status Bar</h1>
+            <h1 className="text-white font-bold text-4xl mt-10">Built-in Status Bar</h1>
             <p className="text-white mt-5">{`A fully featured status bar is also built in to Ragnar. The bar is extremely configurable 
                 and aestetic. Colors, Font, Labels, Padding and more can be configured. Mapping commands to the bar is built in and very easy. 
                 The bar can always be toggled during runtime with a keybind or completely disabled in the config. The bar can also be moved 
@@ -40,7 +54,23 @@ const FeaturesWiki = () => {
                 All of these labels can be turned off.`}</p>
 
             <h1 className="text-white font-bold text-4xl mt-10">My personal bar configuration</h1>
-            <img src="/bar.png" width="100%" className="mt-3 shadow-lg shadow-grey-500"/>
+            <img src="/bar.png" width="100%" className="mt-5 shadow-lg shadow-grey-500"/>
+
+            <h1 className="text-white font-bold text-4xl mt-10">Compositor Support</h1>
+            <p className="text-white mt-5">Ragnar has full support for compositors like picom. Transparent windows can be 
+                achieved, blurring, animations & more. Ragnar is built to work with compositors</p>
+
+            <h1 className="text-white font-bold text-4xl mt-10">Highly Configurable</h1>
+            <p className="text-white mt-5">The config file in Ragnar allows the user to configure pretty much anything from 
+                window border colors to the default window layout. The bar is especially very configurable which allows for nearly 
+                infite looks and themes. All keybinds can be changed to your liking in the config as well. Allthough the config file is 
+                written as a C header file, configuration is really straight forward and simple. Configuring, for the most part is as easy 
+                as changing macro defines.</p>
+
+            <h1 className="text-white font-bold text-4xl mt-10">Minimalism & Performance</h1>
+            <p className="text-white mt-5">Ragnar is very minimal on a code perspective. The window manager contains only about 
+                2k lines code. The focus is on clean and performant code. The handling of layouts, the bar & the general workflow in the 
+                window manager is very lightweight on your hardware. </p>
         </div>
     )
 }
