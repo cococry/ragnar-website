@@ -20,7 +20,7 @@ const ImageTextDiv = ({video, img, heading, desc, btnText, left} : ImageTextDivP
             <div className="flex flex-col w-1/2">
             {img ? 
             <Image
-                className="w-full shadow-xl shadow-pink-300/50"
+                className="w-[100%] shadow-xl shadow-pink-300/50"
                 src={img}
                 alt="brading"/>
             :
