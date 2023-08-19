@@ -2,7 +2,7 @@ import WikiNavigation from "./wikiNavigation";
 
 const GettingStarted = () => {
     return (
-        <div>
+        <div className="bg-black p-10 rounded-xl border border-[3px] border-rounded border-[#1c1c1c] ">
             <h1 className="text-4xl text-white font-bold">Welcome to the Ragnar Wiki</h1>
 
             <p className="text-white text-xl font-bold mt-5">Here you will learn everything you need to know about the Ragnar Window Manager. </p>

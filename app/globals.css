@@ -30,12 +30,16 @@ body {
     background-repeat: no-repeat
 }
 
+
 .pixelart {
     image-rendering: pixelated;
 }
 
 .red_glow {
      box-shadow: 0 0 5px 5px rgba(189, 17, 17, 0.5);
+}
+.red_shadow {
+     box-shadow: 0 0 45px 0px rgba(240, 93, 218, 0.15);
 }
 
 .green_glow {
@@ -44,4 +48,69 @@ body {
 
 .black_glow {
      box-shadow: 0 0 6px 6px rgba(22, 22, 22, 0.4);
+}
+.white_glow {
+     box-shadow: 0 0 6px 6px rgba(222, 222, 222, 0.4);
+}
+.triangle-right-up {
+    width: 0;
+    height: 0;
+    border-left: 0px solid transparent;
+    border-right: 40px solid transparent;
+    border-bottom: 40px solid black; /* Change this color as needed */
+  }
+.triangle-left-up {
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 40px solid black; /* Change this color as needed */
+  }
+
+.triangle-right-down {
+    width: 0;
+    height: 0;
+    border-left: 0px solid transparent;
+    border-right: 40px solid transparent;
+    border-top: 40px solid black; /* Change this color as needed */
+  }
+.triangle-left-down {
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-right: 0px solid transparent;
+    border-top: 40px solid black; /* Change this color as needed */
+  }
+.arrow-left {
+    position: relative;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 20px solid black;
+  }
+.arrow-right {
+    position: relative;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid black;
+  }
+ .half-circle-left {
+    width: 30px;
+    height: 50px;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 0 50px 50px 0;
+    transform: rotate(180deg);
+} 
+.half-circle-right {
+    width: 30px;
+    height: 50px;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 0 50px 50px 0;
 }

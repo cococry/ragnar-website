@@ -2,6 +2,10 @@ import FeaturesWiki from "@/components/Features";
 import GettingStarted from "@/components/GettingStarted";
 import HowToInstall from "@/components/HowToInstall";
 import WikiNavigation from "@/components/wikiNavigation";
+import ConfigFileWiki from "@/components/ConfigFileWiki";
+import KeybindsWiki from "@/components/KeybindsWiki";
+import WindowPropsWiki from "@/components/WindowPropsWiki";
+import BarWiki from "@/components/BarWiki";
 
 const wikiContentPages = [
     {
@@ -16,6 +20,22 @@ const wikiContentPages = [
         slug: "installation",
         content: <HowToInstall/>
     },
+    {
+        slug: "config",
+        content: <ConfigFileWiki/>
+    },
+    {
+        slug: "config-keybinds", 
+        content: <KeybindsWiki/>
+    },
+    {
+        slug: "config-windows", 
+        content: <WindowPropsWiki/>
+    },
+    {
+        slug: "config-bar", 
+        content: <BarWiki/>
+    }
 ]             
 
 const WikiPage = ({params} : {params: {

@@ -1,7 +1,7 @@
 
 const FeaturesWiki = () => {
     return (
-        <div>
+        <div className="bg-black p-10 rounded-xl border border-[3px] border-rounded border-[#1c1c1c] ">
             <h1 className="text-white font-bold text-4xl">Feature List</h1>
             <p className="text-white mt-5">Ragnar has lots of nice features built in out of the box. Allthough Ragnar contains 
                 only about 2k lines of code, there are not less features in Ragnar then in other window managers. </p>

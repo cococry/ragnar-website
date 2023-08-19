@@ -2,6 +2,7 @@ import Navbar from '@/components/navbar'
 import './globals.css'
 import { Poppins } from 'next/font/google'
 import Footer from '@/components/footer'
+import { headers } from 'next/headers'
 const font = Poppins({
     weight: "500",
     subsets: ["latin"],
@@ -12,7 +13,6 @@ export const metadata = {
     description: 'Ragnar window manager', 
     keywords: ['ragnar', 'window manager']
 }
-
 export default function RootLayout({
     children,
 }: {

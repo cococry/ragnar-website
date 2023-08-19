@@ -5,7 +5,6 @@ const WikiNavigationData = [
     { text: "Feature preview", heading: false, link: "/wiki/features" },
     { text: "Installation", heading: true },
     { text: "How to install Ragnar", heading: false, link: "/wiki/installation" },
-    { text: "Post Installation", heading: false, link: "/wiki/post-install" },
     { text: "Configuration", heading: true },
     { text: "Config file", heading: false , link: "/wiki/config"},
     { text: "Configuring keybinds", heading: false, link: "/wiki/config-keybinds" },
@@ -24,7 +23,7 @@ interface WikiProps {
 }
 const WikiNavigation = (props : WikiProps) => {
     return (
-        <div className="xl:whitespace-nowrap inline-block mr-10 bg-gray-700/20 p-5 rounded-2xl black_glow border border-[3px] border-rounded border-[#333333] ">
+        <div className="xl:whitespace-nowrap mr-10 bg-gray-700/20 p-5 rounded-2xl black_glow border border-[3px] border-rounded border-[#333333] ">
             <ul className="flex flex-col gap-2 justify-start">
                 {WikiNavigationData.map((navItem, index) => 
                 navItem.heading ?  
@@ -34,10 +33,10 @@ const WikiNavigation = (props : WikiProps) => {
                 :
                 <div key={index}>
                     <button className={`${props.slug === navItem.link?.split("/").pop() ? "text-blue-500" : "text-white"} text-xl ml-5 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300`}>
-                                <a href={navItem.link}>
-                                    {navItem.text}
-                                </a>
-                            </button>
+                        <a href={navItem.link}>
+                            {navItem.text}
+                        </a>
+                    </button>
                 </div> 
             )}
             </ul> 

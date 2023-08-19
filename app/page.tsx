@@ -40,13 +40,13 @@ export default function Home() {
                 <h1 className="bg-clip-text text-transparent bg-gradient-to-b from-[#fff] to-[#454545] mt-20 flex justify-center items-center w-full text-center xl:text-left text-6xl md:text-7xl font-bold">Overview</h1>
                 <div className="flex flex-col gap-16 md:items-start md:justify-start items-center justify-center">
 
-                            <ImageTextDiv video={"/output.mp4"} desc="Ragnar aims on being minimal. Features & minimalism are treated in a way in that the user will have a great experience but at the same time, the implementation 
+                            <ImageTextDiv href="/wiki/features" video={"/output.mp4"} desc="Ragnar aims on being minimal. Features & minimalism are treated in a way in that the user will have a great experience but at the same time, the implementation 
                             of the window manager is kept simple and reliable" heading="Features & minimalism" btnText="Feature List" left={true}/>
 
-                    <ImageTextDiv img={Branding1} desc="Ragnar is configured in plain C. This might sound scary, but don't worry the config is written in a way that it is really easy to understand. 
+                    <ImageTextDiv href="/wiki/config" img={Branding1} desc="Ragnar is configured in plain C. This might sound scary, but don't worry the config is written in a way that it is really easy to understand. 
                     Similar to suckless' dwm, ragnar has to be recompiled after configuration to reduce overhead on a config file system." heading="Configuration" btnText="How to configure Ragnar" left={false}/>
 
-                    <ImageTextDiv img={Branding2} desc="Dynamic windowing & auto tiling is used in Ragnar. Every part of the layout can be changed whenever you want. There are also 
+                    <ImageTextDiv href="/wiki/tiling" img={Branding2} desc="Dynamic windowing & auto tiling is used in Ragnar. Every part of the layout can be changed whenever you want. There are also 
                     multiple layouts to choose from also containing a floating layout." heading="Tiling in Ragnar" btnText="Tiling explained" left={true}/>
                 </div>
  
