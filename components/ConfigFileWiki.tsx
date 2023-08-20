@@ -1,7 +1,7 @@
 
 const ConfigFileWiki = () => {
     return ( 
-        <div className="bg-black p-10 rounded-xl border border-[3px] border-rounded border-[#1c1c1c] ">
+        <div className="bg-black p-10 inline-block rounded-xl border border-[3px] border-rounded border-[#1c1c1c] ">
             <h1 className="text-white text-4xl font-bold">Config File</h1>
             
             <p className="text-white mt-5">Ragnar uses a C header file as a config. 
@@ -10,6 +10,8 @@ const ConfigFileWiki = () => {
             
             <h1 className="text-white text-4xl font-bold mt-5">Structure</h1>
             
+            <p className="text-white mt-5">The config.h file is structed and split into different sections.
+                All of those sections handle different parts of the window manager.</p>
 
             <h1 className="underline mt-5 text-white text-2xl font-bold">What are Designs?</h1> 
             <p className="text-white mt-5">You will find frequently the word DESIGN in Ragnars config file.
@@ -19,7 +21,7 @@ const ConfigFileWiki = () => {
                 DESIGN_SHARP_LEFT_DOWN, DESIGN_SHARP_RIGHT_DOWN, DESIGN_ARROW_LEFT, DESIGN_ARROW_RIGHT, DESIGN_ROUND_LEFT and 
                 DESIGN_ROUND_RIGHT</p>
             
-            <div className="flex flex-row gap-5 mt-5 bg-gray-500 p-5 rounded-2xl border border-[3px] border-rounded border-[#333333]">
+            <div className="flex flex-row max-w-md gap-5 mt-5 bg-gray-500 p-5 rounded-2xl border border-[3px] border-rounded border-[#333333]">
                 <div className="flex flex-col justify-center items-center">
                     <p className="text-white font-bold">SHARP_LEFT_UP:</p>
                     <div className="triangle-left-up mt-2"></div>
@@ -28,6 +30,8 @@ const ConfigFileWiki = () => {
                     <p className="text-white font-bold">SHARP_RIGHT_UP</p>
                     <div className="triangle-right-up mt-2"></div>
                 </div>
+            </div>
+            <div className="flex flex-row max-w-md gap-5 mt-5 bg-gray-500 p-5 rounded-2xl border border-[3px] border-rounded border-[#333333]">
                 <div className="flex flex-col justify-center items-center">
                     <p className="text-white font-bold">SHARP_LEFT_DOWN</p>
                     <div className="triangle-left-down mt-2"></div>
@@ -36,6 +40,8 @@ const ConfigFileWiki = () => {
                     <p className="text-white font-bold">SHARP_RIGHT_DDOWN</p>
                     <div className="triangle-right-down mt-2"></div>
                 </div>
+            </div>
+            <div className="flex flex-row gap-5 max-w-md mt-5 bg-gray-500 p-5 rounded-2xl border border-[3px] border-rounded border-[#333333]">
                 <div className="flex flex-col justify-center items-center">
                     <p className="text-white font-bold">ARROW_LEFT</p>
                     <div className="arrow-left mt-2"></div>
@@ -45,7 +51,7 @@ const ConfigFileWiki = () => {
                     <div className="arrow-right mt-2"></div>
                 </div>
             </div>
-            <div className="flex flex-row gap-5 mt-5 bg-gray-500 p-5 rounded-2xl border border-[3px] border-rounded border-[#333333] max-w-md">
+            <div className="flex flex-row gap-5 mt-5 max-w-md bg-gray-500 p-5 rounded-2xl border border-[3px] border-rounded border-[#333333] max-w-md">
                 <div className="flex flex-col justify-center items-center">
                     <p className="text-white font-bold">ROUND_LEFT:</p>
                     <div className="half-circle-left mt-2"></div>
@@ -56,8 +62,6 @@ const ConfigFileWiki = () => {
                 </div>
             </div>
 
-            <p className="text-white mt-5">The config.h file is structed and split into different sections.
-                All of those sections handle different parts of the window manager.</p>
 
             <h1 className="underline mt-5 text-white text-2xl font-bold">1. Monitors</h1> 
             <img src="/config1.png" className="mt-5 red_glow rounded-2xl"/>

@@ -6,6 +6,8 @@ import ConfigFileWiki from "@/components/ConfigFileWiki";
 import KeybindsWiki from "@/components/KeybindsWiki";
 import WindowPropsWiki from "@/components/WindowPropsWiki";
 import BarWiki from "@/components/BarWiki";
+import StartupAppConfig from "@/components/StartupAppsConfig";
+import TilingWiki from "@/components/TilingWiki";
 
 const wikiContentPages = [
     {
@@ -35,6 +37,14 @@ const wikiContentPages = [
     {
         slug: "config-bar", 
         content: <BarWiki/>
+    },
+    {
+        slug: "config-start-apps", 
+        content: <StartupAppConfig/>
+    },
+    {
+        slug: "tiling",
+        content: <TilingWiki/>
     }
 ]             
 
