@@ -52,7 +52,7 @@ const WikiPage = ({params} : {params: {
     slug : string
 }}) => {
     const page = wikiContentPages.find(page => page.slug===params.slug);
-    if(!page) return ( <div className="flex flex-col md:flex-row gap-4 justify-start"><WikiNavigation slug={""} /><h1 className="text-4xl text-center text-white font-bold">Page not found</h1></div> )
+    if(!page) return ( <div className="flex flex-col md:flex-row gap-4 justify-start"><WikiNavigation slug={""} /><h1 className="text-4xl text-center text-white font-bold">Page is still in Production</h1></div> )
     return (
         <div className="flex flex-col md:flex-row gap-4 justify-start">
             <WikiNavigation slug={page?.slug}/>
