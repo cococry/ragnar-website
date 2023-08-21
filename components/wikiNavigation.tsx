@@ -1,6 +1,7 @@
 const WikiNavigationData = [
     { text: "Welcome", heading: true,},
     { text: "Getting started", heading: false, link: "/wiki/getting-started"},
+    { text: "Releases", heading: false, link: "/wiki/releases"},
     { text: "Features", heading: true },
     { text: "Feature preview", heading: false, link: "/wiki/features" },
     { text: "Installation", heading: true },
@@ -14,8 +15,6 @@ const WikiNavigationData = [
     { text: "Tiling", heading: true},
     { text: "Tiling in Ragnar", heading: false, link: "/wiki/tiling"},
     { text: "Working with the layout", heading: false, link: "/wiki/layouts" },
-    { text: "Changing layouts", heading: false, link: "/wiki/changing-layouts" },
-    { text: "Configuring layouts", heading: false, link: "/wiki/config-layouts" },
 ]
 
 interface WikiProps {

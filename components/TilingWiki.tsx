@@ -22,8 +22,29 @@ const TilingWiki = () => {
                <li> - Configuring layout behaivour/apperence</li> 
                <li> - Multiple layouts on different monitors</li> 
             </ul>
+                
+            <h1 className="text-white font-bold text-4xl mt-10">Ragnar's Layouts</h1>
+            <div className="flex flex-col xl:flex-row justify-start items-left mt-5 gap-8">
+                <div className="flex flex-col justify-center items-center">
+                    <img className="shadow-xl shadow-gray-750 mb-3" src="/screenshot3.png" width="350px" />
+                    <h1 className="text-white text-center font-bold text-xl">Tiled Master</h1>
+                </div>
+                <div className="flex flex-col justify-center items-center">
+                    <img className="shadow-xl shadow-gray-750 mb-3" src="/layout2.png" width="350px" />
+                    <h1 className="text-white text-center font-bold text-xl">Vertical Master</h1>
+                </div>
+            </div>
 
-
+            <div className="mt-8 flex flex-col xl:flex-row justify-start items-left mt-3 gap-8">
+                <div className="flex flex-col justify-center items-center">
+                    <img className="shadow-xl shadow-gray-750 mb-3" src="/layout3.png" width="350px" />
+                    <h1 className="text-white text-center font-bold text-xl">Vertical Stripes</h1>
+                </div>
+                <div className="flex flex-col justify-center items-center">
+                    <img className="shadow-xl shadow-gray-750 mb-3" src="/layout4.png" width="350px" />
+                    <h1 className="text-white text-center font-bold text-xl">Horizontal Stripes</h1>
+                </div>
+            </div>
 
 
         </div>

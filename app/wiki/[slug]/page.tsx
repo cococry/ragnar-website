@@ -8,6 +8,8 @@ import WindowPropsWiki from "@/components/WindowPropsWiki";
 import BarWiki from "@/components/BarWiki";
 import StartupAppConfig from "@/components/StartupAppsConfig";
 import TilingWiki from "@/components/TilingWiki";
+import WorkingWithLayout from "@/components/WorkingWithLayout";
+import ReleasesWiki from "@/components/Releases";
 
 const wikiContentPages = [
     {
@@ -45,6 +47,14 @@ const wikiContentPages = [
     {
         slug: "tiling",
         content: <TilingWiki/>
+    },
+    {
+        slug: "layouts",
+        content: <WorkingWithLayout/>
+    },
+    {
+        slug: "releases",
+        content: <ReleasesWiki/>
     }
 ]             
 
