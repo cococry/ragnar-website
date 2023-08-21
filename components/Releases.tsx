@@ -65,7 +65,7 @@ const ReleasesWiki = () => {
             <h1 className="text-white text-2xl mt-2 fonb-bold underline">Features</h1>
             <div className="text-white mt-2">
                 <p>- Fixed Bar rendering</p>
-                <p>- Bar now always "spawns" on startup</p>
+                <p>- Bar now always spawns on startup</p>
                 <p>- Bar rendering works without compositor now</p>
                 <p>- Added initial gap size for windows</p>
                 <p>- Bar unhide on window delete fixed</p>

@@ -23,7 +23,7 @@ const TilingWiki = () => {
                <li> - Multiple layouts on different monitors</li> 
             </ul>
                 
-            <h1 className="text-white font-bold text-4xl mt-10">Ragnar's Layouts</h1>
+            <h1 className="text-white font-bold text-4xl mt-10">Layouts</h1>
             <div className="flex flex-col xl:flex-row justify-start items-left mt-5 gap-8">
                 <div className="flex flex-col justify-center items-center">
                     <img className="shadow-xl shadow-gray-750 mb-3" src="/screenshot3.png" width="350px" />
